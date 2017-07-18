@@ -9,6 +9,9 @@ const watch = require('gulp-watch');
 const webpack = require('webpack');
 const gulpWebpack = require('webpack-stream');
 
+
+const WEB_ROOT = 'cordova/www/';
+
 gulp.task('less', function () {
   return gulp.src('./src/theme/app.less')
     .pipe(sourcemaps.init())
@@ -16,13 +19,13 @@ gulp.task('less', function () {
       paths: [ path.join(__dirname, 'src', 'theme') ]
     }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./www/css'));
+    .pipe(gulp.dest('./' + WEB_ROOT + '/css'));
 });
 
 gulp.task('webpack', function() {
   return gulp.src('./src/lib/application.jsx')
     .pipe(gulpWebpack(require('./webpack.config.js'), webpack))
-    .pipe(gulp.dest('www/js/'));
+    .pipe(gulp.dest(WEB_ROOT + 'js/'));
 });
 
 gulp.task('watch', function () {
@@ -30,7 +33,7 @@ gulp.task('watch', function () {
     return watch('src/**/*.*', {
         ignoreInitial: false
       })
-      .pipe(gulp.dest('www'));
+      .pipe(gulp.dest(WEB_ROOT));
 });
 
 
