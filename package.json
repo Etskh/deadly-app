@@ -1,0 +1,41 @@
+{
+  "name": "pos-app",
+  "version": "1.0.0",
+  "description": "POS application",
+  "scripts": {
+    "start": "./node_modules/.bin/phonegap run browser",
+    "webpack": "./node_modules/.bin/webpack",
+    "dev-build": "./node_modules/.bin/webpack --watch",
+    "dev-serve": "./node_modules/.bin/phonegap serve --browser --port 3000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "etskh",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-less": "^3.3.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.4",
+    "webpack": "^2.6.1",
+    "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "jquery": "^3.2.1",
+    "react": "^15.6.0",
+    "react-dom": "^15.6.0"
+  }
+}
